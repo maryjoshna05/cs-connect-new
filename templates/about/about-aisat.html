@@ -33,14 +33,11 @@
         <li><a href="placements.html">Placements</a></li>
         <li><a href="{{ url_for('library') }}">Library</a></li>
     </ul>
-    <a href="#login" class="btn-login">Login</a>
+    <a href="{{ url_for('login') }}" class="btn-login">Login</a>
 </nav>
 
     <!-- Page Header -->
     <section class="page-header">
-      <div class="breadcrumb">
-        <a href="index.html">Home</a> / <span>About AISAT</span>
-      </div>
       <h1>About AISAT</h1>
       <p>Excellence in Education Since 2002</p>
     </section>
@@ -112,10 +109,8 @@
             </div>
             <h3>Our Vision</h3>
             <p>
-              To be a center of excellence in technical education, fostering
-              innovation, research, and entrepreneurship to create globally
-              competent professionals who contribute to the sustainable
-              development of society.
+            To be a centre of excellence to professional education and related services creating technically competent and ethically strong
+innovative minds committed to the overall growth of the nation and beyond.
             </p>
           </div>
 
@@ -125,11 +120,11 @@
             </div>
             <h3>Our Mission</h3>
             <p>
-              To provide quality education with state-of-the-art infrastructure,
-              experienced faculty, and industry collaboration. To nurture
-              innovative thinking, ethical values, and leadership qualities in
-              students, preparing them to meet the challenges of the global
-              technological landscape.
+  <li>We are committed to provide value based education with ample opportunities for research and consultancy.</li>
+  
+  <li>We take every possible step to enhance the skills and bring out quality professionals, providing a friendly and growth oriented ambience with appropriate resources.</li>
+  
+  <li>We improve ourselves through continuous evaluation and updation to meet the challenges and requirements of the modern society.</li>
             </p>
           </div>
         </div>
@@ -257,8 +252,8 @@
                 seating.
               </p>
               <div class="infra-features">
-                <span class="feature-tag">Projectors</span>
-                <span class="feature-tag">AC Rooms</span>
+                <span class="feature-tag">Smartboards</span>
+                <span class="feature-tag">AC Labs</span>
                 <span class="feature-tag">Wi-Fi</span>
               </div>
             </div>
@@ -281,8 +276,10 @@
               </p>
               <div class="infra-features">
                 <span class="feature-tag">Gymnasium</span>
-                <span class="feature-tag">Indoor Games</span>
-                <span class="feature-tag">Outdoor Courts</span>
+                <span class="feature-tag">Batminton court</span>
+                <span class="feature-tag">Swimming pool</span>
+                <span class="feature-tag">Basketball court</span>
+                <span class="feature-tag">turf</span>
               </div>
             </div>
           </div>
@@ -303,9 +300,11 @@
                 students.
               </p>
               <div class="infra-features">
-                <span class="feature-tag">Multi-Cuisine</span>
+                <span class="feature-tag">Snacks and coolbar</span>
+                <span class="feature-tag">Meals</span>
                 <span class="feature-tag">Separate Hostels</span>
                 <span class="feature-tag">24/7 Security</span>
+                <span class="feature-tag">Warden</span>
               </div>
             </div>
           </div>
@@ -363,379 +362,23 @@
         </ul>
       </div>
     </footer>
-
     <script>
-      // Scroll Reveal Animation
-      window.addEventListener("scroll", reveal);
+  window.addEventListener("scroll", reveal);
 
-      function reveal() {
-        var reveals = document.querySelectorAll(".reveal");
-        for (var i = 0; i < reveals.length; i++) {
-          var windowheight = window.innerHeight;
-          var revealtop = reveals[i].getBoundingClientRect().top;
-          var revealpoint = 150;
+  function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+    for (var i = 0; i < reveals.length; i++) {
+      var windowheight = window.innerHeight;
+      var revealtop = reveals[i].getBoundingClientRect().top;
+      var revealpoint = 150;
 
-          if (revealtop < windowheight - revealpoint) {
-            reveals[i].classList.add("active");
-          }
-        }
+      if (revealtop < windowheight - revealpoint) {
+        reveals[i].classList.add("active");
       }
+    }
+  }
 
-      reveal();
-    </script>
-    <!-- ========================================
-     FLOATING CHATBOT WIDGET
-     Add this before </body> on every page
-========================================= -->
-
-
-    <!-- Floating Chatbot Button -->
-    <div class="chatbot-float" id="chatbotFloat" onclick="toggleFloatingChat()">
-      💬
-      <span
-        class="chat-notification"
-        id="chatNotification"
-        style="display: none"
-        >1</span
-      >
-    </div>
-
-    <!-- Floating Chat Window -->
-    <div class="floating-chat-window" id="floatingChatWindow">
-      <!-- Header -->
-      <div class="floating-chat-header">
-        <div class="floating-chat-header-info">
-          <div class="floating-bot-avatar">🤖</div>
-          <div class="floating-header-text">
-            <h3>CS CONNECT</h3>
-            <p>Online now</p>
-          </div>
-        </div>
-        <div class="floating-chat-controls">
-          <button
-            class="floating-control-btn"
-            onclick="clearFloatingChat()"
-            title="Clear"
-          >
-            <i class="fas fa-trash"></i>
-          </button>
-          <button
-            class="floating-control-btn"
-            onclick="openFullChatbot()"
-            title="Expand"
-          >
-            <i class="fas fa-expand"></i>
-          </button>
-          <button
-            class="floating-control-btn"
-            onclick="toggleFloatingChat()"
-            title="Close"
-          >
-            <i class="fas fa-times"></i>
-          </button>
-        </div>
-      </div>
-
-      <!-- Messages Area -->
-      <div class="floating-chat-messages" id="floatingChatMessages">
-        <!-- Welcome Message -->
-        <div class="floating-welcome" id="floatingWelcome">
-          <div class="floating-welcome-icon">👋</div>
-          <h4>Hi! I'm your CS CONNECT Assistant</h4>
-          <p>How can I help you today?</p>
-
-          <div class="floating-welcome-options">
-            <div
-              class="floating-welcome-option"
-              onclick="sendFloatingQuick('Admissions')"
-            >
-              <i class="fas fa-graduation-cap"></i>
-              <span>Admissions</span>
-            </div>
-            <div
-              class="floating-welcome-option"
-              onclick="sendFloatingQuick('Syllabus')"
-            >
-              <i class="fas fa-book"></i>
-              <span>Syllabus</span>
-            </div>
-            <div
-              class="floating-welcome-option"
-              onclick="sendFloatingQuick('Faculty')"
-            >
-              <i class="fas fa-chalkboard-teacher"></i>
-              <span>Faculty</span>
-            </div>
-            <div
-              class="floating-welcome-option"
-              onclick="sendFloatingQuick('Library')"
-            >
-              <i class="fas fa-book-reader"></i>
-              <span>Library</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Typing Indicator -->
-        <div class="floating-typing" id="floatingTyping">
-          <div
-            class="floating-message-avatar"
-            style="background: var(--primary-red, #a41f13); color: white"
-          >
-            🤖
-          </div>
-          <div class="floating-typing-dots">
-            <div class="floating-typing-dot"></div>
-            <div class="floating-typing-dot"></div>
-            <div class="floating-typing-dot"></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Input Area -->
-      <div class="floating-chat-input">
-        <div class="floating-input-wrapper">
-          <input
-            type="text"
-            id="floatingInput"
-            placeholder="Type your message..."
-            onkeypress="handleFloatingEnter(event)"
-          />
-          <button class="floating-send-btn" onclick="sendFloatingMessage()">
-            <i class="fas fa-paper-plane"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <script>
-      // Floating Chat State
-      let floatingChatOpen = false;
-      let floatingMessageCount = 0;
-
-      // Knowledge Base (same as full chatbot)
-      const floatingKB = {
-        admissions: {
-          keywords: ["admission", "admissions", "join", "enroll", "apply"],
-          response:
-            "📚 Admissions are open for 2026!\n\nB.Tech: 120 seats\nM.Tech: 18 seats\n\nVisit our Admissions page for details!",
-          quickReplies: ["Eligibility", "Fee Structure", "Apply Now"],
-        },
-        syllabus: {
-          keywords: ["syllabus", "curriculum", "course", "subjects"],
-          response:
-            "📖 Our curriculum follows KTU 2019 scheme with industry-aligned courses.\n\nView semester-wise syllabus on our Academics page!",
-          quickReplies: ["View Syllabus", "Download Notes"],
-        },
-        faculty: {
-          keywords: ["faculty", "teachers", "professors", "hod"],
-          response:
-            "👨‍🏫 32+ experienced faculty members led by Dr. Jeswin Roy Decouth (HOD).\n\nVisit Faculty page to know more!",
-          quickReplies: ["View Faculty", "Contact Faculty"],
-        },
-        library: {
-          keywords: ["library", "books", "borrow", "qr"],
-          response:
-            "📚 1000+ books with QR code-based system!\n\nFeatures:\n• Online book issue\n• Digital resources\n• Study materials",
-          quickReplies: ["Browse Library", "QR Scanner"],
-        },
-        placement: {
-          keywords: ["placement", "job", "career", "package"],
-          response:
-            "💼 98% Placement Rate!\n\nHighest: ₹45 LPA\nAverage: ₹6.5 LPA\n\nTop companies: TCS, Infosys, Wipro",
-          quickReplies: ["View Companies", "Statistics"],
-        },
-        contact: {
-          keywords: ["contact", "phone", "email", "address"],
-          response:
-            "📞 Contact Us:\n\n📧 cse@aisat.ac.in\n📱 +91 98765 43210\n\n📍 Kalamassery, Kochi, Kerala",
-          quickReplies: ["Get Directions", "Email Us"],
-        },
-      };
-
-      // Toggle Chat Window
-      function toggleFloatingChat() {
-        const chatWindow = document.getElementById("floatingChatWindow");
-        const chatFloat = document.getElementById("chatbotFloat");
-
-        floatingChatOpen = !floatingChatOpen;
-
-        if (floatingChatOpen) {
-          chatWindow.classList.add("active");
-          chatFloat.classList.add("chat-open");
-          chatFloat.innerHTML = "✕";
-          hideNotification();
-          scrollFloatingToBottom();
-        } else {
-          chatWindow.classList.remove("active");
-          chatFloat.classList.remove("chat-open");
-          chatFloat.innerHTML = "💬";
-        }
-      }
-
-      // Send Message
-      function sendFloatingMessage() {
-        const input = document.getElementById("floatingInput");
-        const message = input.value.trim();
-
-        if (message) {
-          // Hide welcome
-          document.getElementById("floatingWelcome").style.display = "none";
-
-          // Add user message
-          addFloatingMessage(message, "user");
-
-          // Clear input
-          input.value = "";
-
-          // Show typing
-          showFloatingTyping();
-
-          // Get response
-          setTimeout(() => {
-            const response = getFloatingResponse(message);
-            hideFloatingTyping();
-            addFloatingMessage(response.text, "bot", response.quickReplies);
-          }, 1000);
-        }
-      }
-
-      // Add Message
-      function addFloatingMessage(text, type, quickReplies = null) {
-        const messagesDiv = document.getElementById("floatingChatMessages");
-        const messageDiv = document.createElement("div");
-        messageDiv.className = `floating-message ${type}`;
-
-        const time = new Date().toLocaleTimeString("en-US", {
-          hour: "2-digit",
-          minute: "2-digit",
-        });
-
-        let quickRepliesHTML = "";
-        if (quickReplies) {
-          quickRepliesHTML = `
-            <div class="floating-quick-replies">
-                ${quickReplies
-                  .map(
-                    (reply) =>
-                      `<button class="floating-quick-reply" onclick="sendFloatingQuick('${reply}')">${reply}</button>`,
-                  )
-                  .join("")}
-            </div>
-        `;
-        }
-
-        messageDiv.innerHTML = `
-        <div class="floating-message-avatar">${type === "bot" ? "🤖" : "👤"}</div>
-        <div>
-            <div class="floating-message-bubble">${text.replace(/\n/g, "<br>")}</div>
-            <div class="floating-message-time">${time}</div>
-            ${quickRepliesHTML}
-        </div>
-    `;
-
-        messagesDiv.appendChild(messageDiv);
-        scrollFloatingToBottom();
-        floatingMessageCount++;
-      }
-
-      // Get Response
-      function getFloatingResponse(message) {
-        const messageLower = message.toLowerCase();
-
-        for (const [key, data] of Object.entries(floatingKB)) {
-          if (
-            data.keywords &&
-            data.keywords.some((keyword) => messageLower.includes(keyword))
-          ) {
-            return {
-              text: data.response,
-              quickReplies: data.quickReplies,
-            };
-          }
-        }
-
-        return {
-          text: "I can help with:\n• Admissions\n• Syllabus\n• Faculty\n• Library\n• Placements\n\nWhat would you like to know?",
-          quickReplies: ["Admissions", "Faculty", "Library"],
-        };
-      }
-
-      // Send Quick Reply
-      function sendFloatingQuick(message) {
-        document.getElementById("floatingInput").value = message;
-        sendFloatingMessage();
-      }
-
-      // Show Typing
-      function showFloatingTyping() {
-        document.getElementById("floatingTyping").classList.add("active");
-        scrollFloatingToBottom();
-      }
-
-      // Hide Typing
-      function hideFloatingTyping() {
-        document.getElementById("floatingTyping").classList.remove("active");
-      }
-
-      // Scroll to Bottom
-      function scrollFloatingToBottom() {
-        const messagesDiv = document.getElementById("floatingChatMessages");
-        messagesDiv.scrollTop = messagesDiv.scrollHeight;
-      }
-
-      // Handle Enter Key
-      function handleFloatingEnter(event) {
-        if (event.key === "Enter") {
-          event.preventDefault();
-          sendFloatingMessage();
-        }
-      }
-
-      // Clear Chat
-      function clearFloatingChat() {
-        if (confirm("Clear chat history?")) {
-          const messagesDiv = document.getElementById("floatingChatMessages");
-          messagesDiv.innerHTML = `
-            <div class="floating-welcome" id="floatingWelcome">
-                <div class="floating-welcome-icon">👋</div>
-                <h4>Chat Cleared!</h4>
-                <p>How can I help you?</p>
-            </div>
-            <div class="floating-typing" id="floatingTyping">
-                <div class="floating-message-avatar" style="background: var(--primary-red, #a41f13); color: white;">🤖</div>
-                <div class="floating-typing-dots">
-                    <div class="floating-typing-dot"></div>
-                    <div class="floating-typing-dot"></div>
-                    <div class="floating-typing-dot"></div>
-                </div>
-            </div>
-        `;
-          floatingMessageCount = 0;
-        }
-      }
-
-      // Open Full Chatbot
-      function openFullChatbot() {
-        window.location.href = "chatbot.html";
-      }
-
-      // Show Notification
-      function showNotification() {
-        document.getElementById("chatNotification").style.display = "flex";
-      }
-
-      // Hide Notification
-      function hideNotification() {
-        document.getElementById("chatNotification").style.display = "none";
-      }
-
-      // Auto-show notification after 5 seconds (optional)
-      setTimeout(() => {
-        if (!floatingChatOpen && floatingMessageCount === 0) {
-          showNotification();
-        }
-      }, 5000);
-    </script>
-  </body>
+  reveal();
+</script>
+</body>
 </html>

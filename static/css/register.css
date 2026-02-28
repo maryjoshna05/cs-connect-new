@@ -1,0 +1,158 @@
+/* ============================= */
+/*        REGISTER PAGE          */
+/* ============================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    height: 100vh;
+    background: linear-gradient(135deg, #8b1e1e, #2c2f4a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Wrapper */
+.login-wrapper {
+    width: 90%;
+    max-width: 1000px;
+    display: flex;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Left Panel */
+.login-left {
+    flex: 1;
+    background: linear-gradient(135deg, #8b1e1e, #b22222);
+    color: white;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-left h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.login-left p {
+    font-size: 16px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* Right Panel */
+.login-right {
+    flex: 1;
+    padding: 60px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-right h2 {
+    color: #8b1e1e;
+    margin-bottom: 25px;
+    font-size: 26px;
+    position: relative;
+}
+
+.login-right h2::after {
+    content: "";
+    width: 50px;
+    height: 3px;
+    background: #8b1e1e;
+    display: block;
+    margin-top: 8px;
+}
+
+/* Input Box */
+.input-box {
+    margin-bottom: 18px;
+}
+
+.input-box input,
+.input-box select {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    transition: 0.3s ease;
+    background: #f9f9f9;
+}
+
+/* Focus Effect */
+.input-box input:focus,
+.input-box select:focus {
+    border-color: #8b1e1e;
+    background: #fff;
+    outline: none;
+    box-shadow: 0 0 6px rgba(139, 30, 30, 0.3);
+}
+
+/* Dropdown style */
+.input-box select {
+    appearance: none;
+    cursor: pointer;
+}
+
+/* Button */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #8b1e1e;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 5px;
+}
+
+.login-btn:hover {
+    background: #a82323;
+    transform: translateY(-2px);
+}
+
+/* Bottom Text */
+.login-right p {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.login-right a {
+    color: #8b1e1e;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-right a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .login-wrapper {
+        flex-direction: column;
+    }
+
+    .login-left {
+        text-align: center;
+        padding: 40px;
+    }
+
+    .login-right {
+        padding: 40px;
+    }
+}

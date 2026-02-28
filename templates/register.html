@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>Register - CS Connect</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}">
 </head>
 
 <body>
@@ -20,7 +20,8 @@
 
     <h2>Register</h2>
 
-    <form method="POST">
+    <form method="POST" action="{{ url_for('register') }}">
+
 
     <div class="input-box">
         <input type="text" name="name" placeholder="Full Name" required>
