@@ -1,0 +1,133 @@
+/* ================= LOGIN PAGE STYLE ================= */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #8b1e1e, #2c2f4a);
+    height: 100vh;
+}
+
+.login-wrapper {
+    display: flex;
+    height: 100vh;
+}
+
+/* LEFT SIDE */
+.login-left {
+    flex: 1;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px;
+}
+
+.login-left h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.login-left p {
+    font-size: 18px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* RIGHT SIDE CARD */
+.login-right {
+    flex: 1;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+}
+
+.login-right h2 {
+    margin-bottom: 30px;
+    color: #8b1e1e;
+    font-size: 28px;
+}
+
+/* INPUT BOX */
+.input-box {
+    margin-bottom: 20px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.input-box input:focus {
+    border-color: #8b1e1e;
+    outline: none;
+    box-shadow: 0 0 5px rgba(139,30,30,0.3);
+}
+
+/* LOGIN BUTTON */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background: #8b1e1e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: #a82323;
+}
+
+/* LINK STYLE */
+.login-right a {
+    color: #8b1e1e;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-right a:hover {
+    text-decoration: underline;
+}
+
+/* FLASH MESSAGE */
+.flash {
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.flash.success {
+    background: #e6f7e6;
+    color: #2e7d32;
+}
+
+.flash.danger {
+    background: #ffe6e6;
+    color: #b71c1c;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .login-wrapper {
+        flex-direction: column;
+    }
+
+    .login-left {
+        padding: 40px;
+        text-align: center;
+    }
+
+    .login-right {
+        padding: 40px;
+    }
+}

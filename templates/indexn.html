@@ -12,7 +12,14 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}" />
 </head>
 <body>
-   
+     <!-- News Ticker -->
+    <div class="news-ticker">
+      <div class="ticker-content">
+        📢 Admissions Open for 2026 Batch | 🎉 CSE Student Wins National
+        Hackathon | 📅 Next Workshop: AI in Healthcare - Feb 20th | 🏆 AISAT
+        Ranked Top 10 in Innovation
+      </div>
+    </div>
 
     <div class="chatbot-float" onclick="toggleChat()">...</div>
     <div class="chat-window" id="chatWindow">...</div>
@@ -35,7 +42,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         <li><a href="placements.html">Placements</a></li>
         <li><a href="{{ url_for('library') }}">Library</a></li>
     </ul>
-    <a href="#login" class="btn-login">Login</a>
+    <a href="{{ url_for('login') }}" class="btn-login">Login</a>
 </nav>
 
     <section class="hero" id="home">
