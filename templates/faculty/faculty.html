@@ -4,22 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Faculty | CS Connect</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/faculty.css') }}"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/faculty.css') }}" />
   </head>
   <body>
     <div class="news-ticker">
       <div class="ticker-content">
-        📢 Admissions Open 2026 | 🎉 Faculty Achievement Award | 📅 Research
-        Seminar Feb 25
+        📢 Admissions Open 2026 | 🎉 Faculty Achievement Award | 📅 Research Seminar Feb 25
       </div>
     </div>
+
     <nav class="navbar">
       <div class="nav-container">
         <div class="logo">AISAT CSE</div>
@@ -47,23 +41,13 @@
       <div class="container">
         <div class="filter-bar">
           <div class="search-box">
-            <i class="fas fa-search"></i
-            ><input
-              type="text"
-              id="searchInput"
-              placeholder="Search by name..."
-            />
+            <i class="fas fa-search"></i>
+            <input type="text" id="searchInput" placeholder="Search by name..." />
           </div>
           <div class="filter-buttons">
-            <button class="filter-btn active" data-filter="all">
-              All Faculty</button
-            ><button class="filter-btn" data-filter="professor">
-              Professors</button
-            ><button class="filter-btn" data-filter="associate">
-              Associate Professors</button
-            ><button class="filter-btn" data-filter="assistant">
-              Assistant Professors
-            </button>
+            <button class="filter-btn active" data-filter="all">All Faculty</button>
+            <button class="filter-btn" data-filter="hod">Head of Department</button>
+            <button class="filter-btn" data-filter="assistant">Assistant Professors</button>
           </div>
         </div>
       </div>
@@ -76,349 +60,386 @@
           <div class="header-line"></div>
         </div>
         <div class="faculty-grid" id="facultyGrid">
-          <div class="faculty-card reveal" data-designation="professor">
+
+          <!-- HOD -->
+          <div class="faculty-card reveal" data-designation="hod">
             <div class="faculty-photo">
-              <img
-                src="https://via.placeholder.com/300"
-                alt="Dr. Rajesh Kumar"
-              />
+              <img src="https://aisat.ac.in/wp-content/uploads/2024/01/dr.-jeswin-300x287.jpg" alt="Dr. Jeswin Roy Dcouth" />
               <div class="photo-overlay">
                 <button class="view-profile-btn">View Profile</button>
               </div>
             </div>
             <div class="faculty-info">
-              <h3>Dr. Rajesh Kumar</h3>
-              <span class="designation">Professor & HOD</span>
-              <div class="qualification">
-                Ph.D. in Computer Science, IIT Delhi
-              </div>
-              <div class="experience">
-                <i class="fas fa-briefcase"></i> 18 Years Experience
-              </div>
-              <div class="research-interests">
-                <strong>Research:</strong> Machine Learning, AI, Data Mining
-              </div>
-              <div class="publications">
-                <i class="fas fa-book"></i> <strong>45</strong> Publications
-              </div>
-              <div class="subjects">
-                <strong>Subjects:</strong> AI, ML, Data Structures
-              </div>
-              <div class="office-hours">
-                <i class="fas fa-clock"></i> Mon-Fri: 2:00 PM - 4:00 PM
-              </div>
+              <h3>Dr. Jeswin Roy Dcouth</h3>
+              <span class="designation">Associate Professor & Head of Department</span>
+              <div class="qualification">Ph.D Computer Science and Engineering, PGDCL</div>
+              <div class="experience"><i class="fas fa-briefcase"></i> Joined: 02.06.2014</div>
+              <div class="research-interests"><strong>Research:</strong> Cyber Security</div>
               <div class="contact-info">
-                <div class="contact-item">
-                  <i class="fas fa-envelope"></i> rajesh.kumar@aisat.ac.in
-                </div>
-                <div class="contact-item">
-                  <i class="fas fa-phone"></i> +91 98765 43210
-                </div>
+                <div class="contact-item"><i class="fas fa-envelope"></i> jeswin@aisat.ac.in</div>
               </div>
               <div class="social-links">
-                <a href="#" title="Google Scholar"
-                  ><i class="fas fa-graduation-cap"></i></a
-                ><a href="#" title="ORCID"><i class="fab fa-orcid"></i></a
-                ><a href="#" title="ResearchGate"
-                  ><i class="fab fa-researchgate"></i
-                ></a>
+                <a href="#" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
               </div>
             </div>
           </div>
 
-          <div class="faculty-card reveal" data-designation="associate">
-            <div class="faculty-photo">
-              <img
-                src="https://via.placeholder.com/300"
-                alt="Dr. Priya Sharma"
-              />
-              <div class="photo-overlay">
-                <button class="view-profile-btn">View Profile</button>
-              </div>
-            </div>
-            <div class="faculty-info">
-              <h3>Dr. Priya Sharma</h3>
-              <span class="designation">Associate Professor</span>
-              <div class="qualification">
-                Ph.D. in Software Engineering, NIT Calicut
-              </div>
-              <div class="experience">
-                <i class="fas fa-briefcase"></i> 12 Years Experience
-              </div>
-              <div class="research-interests">
-                <strong>Research:</strong> Cloud Computing, IoT, Big Data
-              </div>
-              <div class="publications">
-                <i class="fas fa-book"></i> <strong>32</strong> Publications
-              </div>
-              <div class="subjects">
-                <strong>Subjects:</strong> Cloud Computing, DBMS, Software
-                Engineering
-              </div>
-              <div class="office-hours">
-                <i class="fas fa-clock"></i> Tue-Thu: 3:00 PM - 5:00 PM
-              </div>
-              <div class="contact-info">
-                <div class="contact-item">
-                  <i class="fas fa-envelope"></i> priya.sharma@aisat.ac.in
-                </div>
-                <div class="contact-item">
-                  <i class="fas fa-phone"></i> +91 98765 43211
-                </div>
-              </div>
-              <div class="social-links">
-                <a href="#" title="Google Scholar"
-                  ><i class="fas fa-graduation-cap"></i></a
-                ><a href="#" title="ORCID"><i class="fab fa-orcid"></i></a
-                ><a href="#" title="LinkedIn"
-                  ><i class="fab fa-linkedin"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="faculty-card reveal" data-designation="associate">
-            <div class="faculty-photo">
-              <img src="https://via.placeholder.com/300" alt="Dr. Anil Verma" />
-              <div class="photo-overlay">
-                <button class="view-profile-btn">View Profile</button>
-              </div>
-            </div>
-            <div class="faculty-info">
-              <h3>Dr. Anil Verma</h3>
-              <span class="designation">Associate Professor</span>
-              <div class="qualification">
-                Ph.D. in Networks, Anna University
-              </div>
-              <div class="experience">
-                <i class="fas fa-briefcase"></i> 10 Years Experience
-              </div>
-              <div class="research-interests">
-                <strong>Research:</strong> Cybersecurity, Networks, Blockchain
-              </div>
-              <div class="publications">
-                <i class="fas fa-book"></i> <strong>28</strong> Publications
-              </div>
-              <div class="subjects">
-                <strong>Subjects:</strong> Computer Networks, Cybersecurity,
-                Cryptography
-              </div>
-              <div class="office-hours">
-                <i class="fas fa-clock"></i> Mon-Wed: 10:00 AM - 12:00 PM
-              </div>
-              <div class="contact-info">
-                <div class="contact-item">
-                  <i class="fas fa-envelope"></i> anil.verma@aisat.ac.in
-                </div>
-                <div class="contact-item">
-                  <i class="fas fa-phone"></i> +91 98765 43212
-                </div>
-              </div>
-              <div class="social-links">
-                <a href="#" title="Google Scholar"
-                  ><i class="fas fa-graduation-cap"></i></a
-                ><a href="#" title="ORCID"><i class="fab fa-orcid"></i></a>
-              </div>
-            </div>
-          </div>
-
+          <!-- Ms. Divya Mohan -->
           <div class="faculty-card reveal" data-designation="assistant">
             <div class="faculty-photo">
-              <img
-                src="https://via.placeholder.com/300"
-                alt="Ms. Sneha Menon"
-              />
+              <img src="https://aisat.ac.in/wp-content/uploads/2024/01/Ms.-Divya-Mohan-e1706040948144.jpg" alt="Ms. Divya Mohan" />
               <div class="photo-overlay">
                 <button class="view-profile-btn">View Profile</button>
               </div>
             </div>
             <div class="faculty-info">
-              <h3>Ms. Sneha Menon</h3>
+              <h3>Ms. Divya Mohan</h3>
               <span class="designation">Assistant Professor</span>
-              <div class="qualification">M.Tech in CSE, CUSAT</div>
-              <div class="experience">
-                <i class="fas fa-briefcase"></i> 6 Years Experience
-              </div>
-              <div class="research-interests">
-                <strong>Research:</strong> Deep Learning, Computer Vision, NLP
-              </div>
-              <div class="publications">
-                <i class="fas fa-book"></i> <strong>15</strong> Publications
-              </div>
-              <div class="subjects">
-                <strong>Subjects:</strong> Python Programming, Deep Learning, AI
-              </div>
-              <div class="office-hours">
-                <i class="fas fa-clock"></i> Mon-Fri: 11:00 AM - 1:00 PM
-              </div>
+              <div class="qualification">M.Tech Software Engineering</div>
+              <div class="experience"><i class="fas fa-briefcase"></i> Joined: 10.06.2015</div>
+              <div class="research-interests"><strong>Research:</strong> Machine Learning</div>
               <div class="contact-info">
-                <div class="contact-item">
-                  <i class="fas fa-envelope"></i> sneha.menon@aisat.ac.in
-                </div>
-                <div class="contact-item">
-                  <i class="fas fa-phone"></i> +91 98765 43213
-                </div>
-              </div>
-              <div class="social-links">
-                <a href="#" title="Google Scholar"
-                  ><i class="fas fa-graduation-cap"></i></a
-                ><a href="#" title="LinkedIn"
-                  ><i class="fab fa-linkedin"></i
-                ></a>
+                <div class="contact-item"><i class="fas fa-envelope"></i> divya@aisat.ac.in</div>
               </div>
             </div>
           </div>
 
+          <!-- Ms. Nisy John Panicker -->
           <div class="faculty-card reveal" data-designation="assistant">
             <div class="faculty-photo">
-              <img
-                src="https://via.placeholder.com/300"
-                alt="Mr. Karthik Nair"
-              />
+              <img src="https://aisat.ac.in/wp-content/uploads/2024/01/nisy-e1706206510394.jpg" alt="Ms. Nisy John Panicker" />
               <div class="photo-overlay">
                 <button class="view-profile-btn">View Profile</button>
               </div>
             </div>
             <div class="faculty-info">
-              <h3>Mr. Karthik Nair</h3>
-              <span class="designation">Assistant Professor</span>
-              <div class="qualification">M.Tech in CSE, KTU</div>
-              <div class="experience">
-                <i class="fas fa-briefcase"></i> 5 Years Experience
-              </div>
-              <div class="research-interests">
-                <strong>Research:</strong> Web Technologies, Mobile Computing
-              </div>
-              <div class="publications">
-                <i class="fas fa-book"></i> <strong>12</strong> Publications
-              </div>
-              <div class="subjects">
-                <strong>Subjects:</strong> Web Development, Mobile Apps,
-                JavaScript
-              </div>
-              <div class="office-hours">
-                <i class="fas fa-clock"></i> Tue-Thu: 2:00 PM - 4:00 PM
-              </div>
+              <h3>Ms. Nisy John Panicker</h3>
+              <span class="designation">Assistant Professor (Senior Scale)</span>
+              <div class="qualification">M.Tech CSE</div>
+              <div class="experience"><i class="fas fa-briefcase"></i> Joined: 29.08.2022</div>
+              <div class="research-interests"><strong>Research:</strong> Machine Learning, Data Science, AI</div>
               <div class="contact-info">
-                <div class="contact-item">
-                  <i class="fas fa-envelope"></i> karthik.nair@aisat.ac.in
-                </div>
-                <div class="contact-item">
-                  <i class="fas fa-phone"></i> +91 98765 43214
-                </div>
-              </div>
-              <div class="social-links">
-                <a href="#" title="Google Scholar"
-                  ><i class="fas fa-graduation-cap"></i></a
-                ><a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                <div class="contact-item"><i class="fas fa-envelope"></i> nisy@aisat.ac.in</div>
               </div>
             </div>
           </div>
 
+          <!-- Ms. Lima Sebastian -->
           <div class="faculty-card reveal" data-designation="assistant">
             <div class="faculty-photo">
-              <img
-                src="https://via.placeholder.com/300"
-                alt="Ms. Divya Thomas"
-              />
+              <img src="https://aisat.ac.in/wp-content/uploads/2024/01/lima-e1706206284280.jpg" alt="Ms. Lima Sebastian" />
               <div class="photo-overlay">
                 <button class="view-profile-btn">View Profile</button>
               </div>
             </div>
             <div class="faculty-info">
-              <h3>Ms. Divya Thomas</h3>
+              <h3>Ms. Lima Sebastian</h3>
               <span class="designation">Assistant Professor</span>
-              <div class="qualification">M.Tech in Data Science, IIITM-K</div>
-              <div class="experience">
-                <i class="fas fa-briefcase"></i> 4 Years Experience
-              </div>
-              <div class="research-interests">
-                <strong>Research:</strong> Data Analytics, Business Intelligence
-              </div>
-              <div class="publications">
-                <i class="fas fa-book"></i> <strong>10</strong> Publications
-              </div>
-              <div class="subjects">
-                <strong>Subjects:</strong> Data Science, Statistics, R
-                Programming
-              </div>
-              <div class="office-hours">
-                <i class="fas fa-clock"></i> Mon-Wed: 1:00 PM - 3:00 PM
-              </div>
+              <div class="qualification">M.Tech Computer Science and Engineering</div>
+              <div class="experience"><i class="fas fa-briefcase"></i> Joined: 28.12.2014</div>
+              <div class="research-interests"><strong>Research:</strong> Theory of Computation</div>
               <div class="contact-info">
-                <div class="contact-item">
-                  <i class="fas fa-envelope"></i> divya.thomas@aisat.ac.in
-                </div>
-                <div class="contact-item">
-                  <i class="fas fa-phone"></i> +91 98765 43215
-                </div>
-              </div>
-              <div class="social-links">
-                <a href="#" title="Google Scholar"
-                  ><i class="fas fa-graduation-cap"></i></a
-                ><a href="#" title="Kaggle"><i class="fab fa-kaggle"></i></a>
+                <div class="contact-item"><i class="fas fa-envelope"></i> lima@aisat.ac.in</div>
               </div>
             </div>
           </div>
+
+          <!-- Ms. Teenu Jose -->
+          <div class="faculty-card reveal" data-designation="assistant">
+            <div class="faculty-photo">
+              <img src="https://aisat.ac.in/wp-content/uploads/2024/01/teenu1-242x300-1-e1706205964261.png" alt="Ms. Teenu Jose" />
+              <div class="photo-overlay">
+                <button class="view-profile-btn">View Profile</button>
+              </div>
+            </div>
+            <div class="faculty-info">
+              <h3>Ms. Teenu Jose</h3>
+              <span class="designation">Assistant Professor</span>
+              <div class="qualification">M.Tech Computer Science & Engineering</div>
+              <div class="experience"><i class="fas fa-briefcase"></i> Joined: 06.01.2020</div>
+              <div class="research-interests"><strong>Research:</strong> Machine Learning</div>
+              <div class="contact-info">
+                <div class="contact-item"><i class="fas fa-envelope"></i> teenu@aisat.ac.in</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ms. Sini P Joy -->
+          <div class="faculty-card reveal" data-designation="assistant">
+            <div class="faculty-photo">
+              <img src="https://aisat.ac.in/wp-content/uploads/2024/01/sini-e1706206307301.jpg" alt="Ms. Sini P Joy" />
+              <div class="photo-overlay">
+                <button class="view-profile-btn">View Profile</button>
+              </div>
+            </div>
+            <div class="faculty-info">
+              <h3>Ms. Sini P Joy</h3>
+              <span class="designation">Assistant Professor</span>
+              <div class="qualification">M.E Computer Science and Engineering</div>
+              <div class="experience"><i class="fas fa-briefcase"></i> Joined: 02.06.2014</div>
+              <div class="research-interests"><strong>Research:</strong> Cyber Physical Systems, Intrusion Detection</div>
+              <div class="contact-info">
+                <div class="contact-item"><i class="fas fa-envelope"></i> sini@aisat.ac.in</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mr. Anson Antony Fertal -->
+          <div class="faculty-card reveal" data-designation="assistant">
+            <div class="faculty-photo">
+              <img src="https://aisat.ac.in/wp-content/uploads/2024/01/Anson-Antony-Fertal-e1706206225672.jpeg" alt="Mr. Anson Antony Fertal" />
+              <div class="photo-overlay">
+                <button class="view-profile-btn">View Profile</button>
+              </div>
+            </div>
+            <div class="faculty-info">
+              <h3>Mr. Anson Antony Fertal</h3>
+              <span class="designation">Assistant Professor</span>
+              <div class="qualification">M.Tech CSE</div>
+              <div class="experience"><i class="fas fa-briefcase"></i> Joined: 25.08.2023</div>
+              <div class="research-interests"><strong>Research:</strong> Cloud Computing</div>
+              <div class="contact-info">
+                <div class="contact-item"><i class="fas fa-envelope"></i> anson@aisat.ac.in</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ms. Sharija PM -->
+          <div class="faculty-card reveal" data-designation="assistant">
+            <div class="faculty-photo">
+              <img src="https://via.placeholder.com/300x300/8F7A6E/FFFFFF?text=Ms.+Sharija" alt="Ms. Sharija PM" />
+              <div class="photo-overlay">
+                <button class="view-profile-btn">View Profile</button>
+              </div>
+            </div>
+            <div class="faculty-info">
+              <h3>Ms. Sharija PM</h3>
+              <span class="designation">Assistant Professor</span>
+              <div class="qualification">M.Tech Computer Science & Engineering</div>
+              <div class="experience"><i class="fas fa-briefcase"></i> Joined: 15.01.2024</div>
+              <div class="research-interests"><strong>Research:</strong> Cyber Security</div>
+              <div class="contact-info">
+                <div class="contact-item"><i class="fas fa-envelope"></i> sharija@aisat.ac.in</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ms. Ashwathy Anda Chacko -->
+          <div class="faculty-card reveal" data-designation="assistant">
+            <div class="faculty-photo">
+              <img src="https://via.placeholder.com/300x300/8F7A6E/FFFFFF?text=Ms.+Ashwathy" alt="Ms. Ashwathy Anda Chacko" />
+              <div class="photo-overlay">
+                <button class="view-profile-btn">View Profile</button>
+              </div>
+            </div>
+            <div class="faculty-info">
+              <h3>Ms. Ashwathy Anda Chacko</h3>
+              <span class="designation">Assistant Professor</span>
+              <div class="qualification">M.Tech Computer Science and Engineering</div>
+              <div class="experience"><i class="fas fa-briefcase"></i> Joined: 07.07.2024</div>
+              <div class="research-interests"><strong>Research:</strong> Cloud Computing, Networking</div>
+              <div class="contact-info">
+                <div class="contact-item"><i class="fas fa-envelope"></i> ashwathy@aisat.ac.in</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ms. A Thilakavathy -->
+          <div class="faculty-card reveal" data-designation="assistant">
+            <div class="faculty-photo">
+              <img src="https://via.placeholder.com/300x300/8F7A6E/FFFFFF?text=Ms.+Thilakavathy" alt="Ms. A Thilakavathy" />
+              <div class="photo-overlay">
+                <button class="view-profile-btn">View Profile</button>
+              </div>
+            </div>
+            <div class="faculty-info">
+              <h3>Ms. A Thilakavathy</h3>
+              <span class="designation">Assistant Professor</span>
+              <div class="qualification">M.Tech CSE</div>
+              <div class="experience"><i class="fas fa-briefcase"></i> Joined: 07.02.2024</div>
+              <div class="research-interests"><strong>Research:</strong> Network Security, Machine Learning</div>
+              <div class="contact-info">
+                <div class="contact-item"><i class="fas fa-envelope"></i> thilakavathy@aisat.ac.in</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ms. Krishna C J -->
+          <div class="faculty-card reveal" data-designation="assistant">
+            <div class="faculty-photo">
+              <img src="https://via.placeholder.com/300x300/8F7A6E/FFFFFF?text=Ms.+Krishna" alt="Ms. Krishna C J" />
+              <div class="photo-overlay">
+                <button class="view-profile-btn">View Profile</button>
+              </div>
+            </div>
+            <div class="faculty-info">
+              <h3>Ms. Krishna C J</h3>
+              <span class="designation">Assistant Professor</span>
+              <div class="qualification">M.Tech CSE</div>
+              <div class="experience"><i class="fas fa-briefcase"></i> Joined: 25.08.2023</div>
+              <div class="research-interests"><strong>Research:</strong> IOT, Cloud Computing</div>
+              <div class="contact-info">
+                <div class="contact-item"><i class="fas fa-envelope"></i> krishna@aisat.ac.in</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ms. Sweety Joy C -->
+          <div class="faculty-card reveal" data-designation="assistant">
+            <div class="faculty-photo">
+              <img src="https://via.placeholder.com/300x300/8F7A6E/FFFFFF?text=Ms.+Sweety" alt="Ms. Sweety Joy C" />
+              <div class="photo-overlay">
+                <button class="view-profile-btn">View Profile</button>
+              </div>
+            </div>
+            <div class="faculty-info">
+              <h3>Ms. Sweety Joy C</h3>
+              <span class="designation">Assistant Professor</span>
+              <div class="qualification">M.Tech Computer Science & Engineering</div>
+              <div class="experience"><i class="fas fa-briefcase"></i> Joined: 01.02.2024</div>
+              <div class="research-interests"><strong>Research:</strong> Fuzzy Logic, Cyber Security</div>
+              <div class="contact-info">
+                <div class="contact-item"><i class="fas fa-envelope"></i> sweety@aisat.ac.in</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ms. Thara Raveendran -->
+          <div class="faculty-card reveal" data-designation="assistant">
+            <div class="faculty-photo">
+              <img src="https://via.placeholder.com/300x300/8F7A6E/FFFFFF?text=Ms.+Thara" alt="Ms. Thara Raveendran" />
+              <div class="photo-overlay">
+                <button class="view-profile-btn">View Profile</button>
+              </div>
+            </div>
+            <div class="faculty-info">
+              <h3>Ms. Thara Raveendran</h3>
+              <span class="designation">Assistant Professor</span>
+              <div class="qualification">M.Tech CSE</div>
+              <div class="experience"><i class="fas fa-briefcase"></i> Joined: 01.07.2024</div>
+              <div class="research-interests"><strong>Research:</strong> Data Analytics</div>
+              <div class="contact-info">
+                <div class="contact-item"><i class="fas fa-envelope"></i> thara@aisat.ac.in</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ms. Anna Isabel John -->
+          <div class="faculty-card reveal" data-designation="assistant">
+            <div class="faculty-photo">
+              <img src="https://via.placeholder.com/300x300/8F7A6E/FFFFFF?text=Ms.+Anna" alt="Ms. Anna Isabel John" />
+              <div class="photo-overlay">
+                <button class="view-profile-btn">View Profile</button>
+              </div>
+            </div>
+            <div class="faculty-info">
+              <h3>Ms. Anna Isabel John</h3>
+              <span class="designation">Assistant Professor</span>
+              <div class="qualification">M.Tech Computer Science and Systems Engineering</div>
+              <div class="experience"><i class="fas fa-briefcase"></i> Joined: 01.08.2024</div>
+              <div class="research-interests"><strong>Research:</strong> Data Analytics</div>
+              <div class="contact-info">
+                <div class="contact-item"><i class="fas fa-envelope"></i> anna@aisat.ac.in</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ms. Shruthi Chandran -->
+          <div class="faculty-card reveal" data-designation="assistant">
+            <div class="faculty-photo">
+              <img src="https://via.placeholder.com/300x300/8F7A6E/FFFFFF?text=Ms.+Shruthi" alt="Ms. Shruthi Chandran" />
+              <div class="photo-overlay">
+                <button class="view-profile-btn">View Profile</button>
+              </div>
+            </div>
+            <div class="faculty-info">
+              <h3>Ms. Shruthi Chandran</h3>
+              <span class="designation">Assistant Professor</span>
+              <div class="qualification">M.Tech Computer Science and Engineering</div>
+              <div class="experience"><i class="fas fa-briefcase"></i> Joined: 01.06.2025</div>
+              <div class="research-interests"><strong>Research:</strong> Data Mining</div>
+              <div class="contact-info">
+                <div class="contact-item"><i class="fas fa-envelope"></i> shruthi@aisat.ac.in</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ms. Angel Mathai -->
+          <div class="faculty-card reveal" data-designation="assistant">
+            <div class="faculty-photo">
+              <img src="https://via.placeholder.com/300x300/8F7A6E/FFFFFF?text=Ms.+Angel" alt="Ms. Angel Mathai" />
+              <div class="photo-overlay">
+                <button class="view-profile-btn">View Profile</button>
+              </div>
+            </div>
+            <div class="faculty-info">
+              <h3>Ms. Angel Mathai</h3>
+              <span class="designation">Assistant Professor</span>
+              <div class="qualification">M.Tech Computer Engineering</div>
+              <div class="experience"><i class="fas fa-briefcase"></i> Joined: 01.06.2024</div>
+              <div class="research-interests"><strong>Research:</strong> Computer Security</div>
+              <div class="contact-info">
+                <div class="contact-item"><i class="fas fa-envelope"></i> angel@aisat.ac.in</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ms. Kalyani S -->
+          <div class="faculty-card reveal" data-designation="assistant">
+            <div class="faculty-photo">
+              <img src="https://via.placeholder.com/300x300/8F7A6E/FFFFFF?text=Ms.+Kalyani" alt="Ms. Kalyani S" />
+              <div class="photo-overlay">
+                <button class="view-profile-btn">View Profile</button>
+              </div>
+            </div>
+            <div class="faculty-info">
+              <h3>Ms. Kalyani S</h3>
+              <span class="designation">Assistant Professor</span>
+              <div class="qualification">M.Tech Computer Vision and Image Processing</div>
+              <div class="experience"><i class="fas fa-briefcase"></i> Joined: 15.02.2025</div>
+              <div class="research-interests"><strong>Research:</strong> Computer Vision, Image Processing</div>
+              <div class="contact-info">
+                <div class="contact-item"><i class="fas fa-envelope"></i> kalyani@aisat.ac.in</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="no-results" id="noResults" style="display: none">
+          <i class="fas fa-search"></i>
+          <h3>No faculty members found</h3>
+          <p>Try adjusting your search or filter criteria</p>
         </div>
       </div>
     </section>
 
+    <!-- Instructors -->
     <section class="staff-section">
       <div class="container">
         <div class="section-header">
-          <h2>Supporting Staff</h2>
+          <h2>Instructors</h2>
           <div class="header-line"></div>
         </div>
         <div class="staff-grid">
           <div class="staff-card reveal">
             <div class="staff-icon"><i class="fas fa-flask"></i></div>
-            <h3>Mr. Suresh Kumar</h3>
-            <span class="role">Senior Lab Instructor</span>
-            <div class="staff-details">
-              <p><i class="fas fa-briefcase"></i> 15 Years Experience</p>
-              <p><i class="fas fa-cog"></i> Manages Hardware & Network Lab</p>
-              <p><i class="fas fa-envelope"></i> suresh.kumar@aisat.ac.in</p>
-              <p><i class="fas fa-phone"></i> +91 98765 43220</p>
-            </div>
+            <h3>Mr. Denny Peter</h3>
+            <span class="role">Lab Instructor</span>
           </div>
-
           <div class="staff-card reveal">
             <div class="staff-icon"><i class="fas fa-desktop"></i></div>
-            <h3>Ms. Lakshmi Menon</h3>
+            <h3>Ms. Ashmy Antony</h3>
             <span class="role">Lab Instructor</span>
-            <div class="staff-details">
-              <p><i class="fas fa-briefcase"></i> 8 Years Experience</p>
-              <p><i class="fas fa-cog"></i> Programming & Software Lab</p>
-              <p><i class="fas fa-envelope"></i> lakshmi.menon@aisat.ac.in</p>
-              <p><i class="fas fa-phone"></i> +91 98765 43221</p>
-            </div>
           </div>
-
           <div class="staff-card reveal">
-            <div class="staff-icon"><i class="fas fa-user-tie"></i></div>
-            <h3>Mr. Ravi Krishnan</h3>
-            <span class="role">Office Administrator</span>
-            <div class="staff-details">
-              <p><i class="fas fa-briefcase"></i> 12 Years Experience</p>
-              <p><i class="fas fa-tasks"></i> Handles Administrative Work</p>
-              <p><i class="fas fa-envelope"></i> ravi.krishnan@aisat.ac.in</p>
-              <p><i class="fas fa-phone"></i> +91 98765 43222</p>
-            </div>
+            <div class="staff-icon"><i class="fas fa-desktop"></i></div>
+            <h3>Ms. Saranya P K</h3>
+            <span class="role">Lab Instructor</span>
           </div>
-
           <div class="staff-card reveal">
-            <div class="staff-icon"><i class="fas fa-clipboard-list"></i></div>
-            <h3>Ms. Meera Das</h3>
-            <span class="role">Department Secretary</span>
-            <div class="staff-details">
-              <p><i class="fas fa-briefcase"></i> 10 Years Experience</p>
-              <p>
-                <i class="fas fa-tasks"></i> Student Records & Documentation
-              </p>
-              <p><i class="fas fa-envelope"></i> meera.das@aisat.ac.in</p>
-              <p><i class="fas fa-phone"></i> +91 98765 43223</p>
-            </div>
+            <div class="staff-icon"><i class="fas fa-desktop"></i></div>
+            <h3>Ms. Aleena P</h3>
+            <span class="role">Lab Instructor</span>
           </div>
         </div>
       </div>
@@ -427,10 +448,7 @@
     <footer>
       <div>
         <h4>AISAT CSE</h4>
-        <p>
-          Albertian Institute of Science and Technology, Kalamassery, Kochi,
-          Kerala.
-        </p>
+        <p>Albertian Institute of Science and Technology, Kalamassery, Kochi, Kerala.</p>
       </div>
       <div>
         <h4>Quick Links</h4>
